@@ -1,4 +1,4 @@
-export const URI = "https://flexive.herokuapp.com/"
+export const URI = "https://flexive.herokuapp.com"
 
 
 export async function  getInvestments(jwt){
