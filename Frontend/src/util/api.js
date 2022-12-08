@@ -3,7 +3,7 @@ export const URI = "https://flexive.herokuapp.com"
 
 export async function  getInvestments(jwt){
 
-    const resp = await fetch(`${URI}/api/investments`, {
+    const resp = await fetch(`/api/investments`, {
       headers: {
         "content-type": "application/json",
         Authorization: `Bearer ${jwt}`,
@@ -18,7 +18,7 @@ export async function  getInvestments(jwt){
 
 export const addInvestment = (jwt) => {
 
-    fetch(`${URI}/api/investments`, {
+    fetch(`/api/investments`, {
       headers: {
         "content-type": "application/json",
         Authorization: `Bearer ${jwt}`,
@@ -35,7 +35,7 @@ export const addInvestment = (jwt) => {
 }
 
 export const updateInvestment = (jwt, company) => {
-    fetch(`${URI}/api/investments`, {
+    fetch(`/api/investments`, {
         headers: {
           "content-type": "application/json",
           Authorization: `Bearer ${jwt}`,
@@ -59,7 +59,7 @@ export const changeFunds = (jwt, funds, user, operation) => {
   console.log(funds, user)
 
   
-  fetch(`${URI}/api/users/account/${user}`, {
+  fetch(`/api/users/account/${user}`, {
     headers: {
       Authorization: `Bearer ${jwt}`,
       "content-type": "application/json-patch+json",
@@ -82,7 +82,7 @@ export const changeFunds = (jwt, funds, user, operation) => {
 
 
 export const changeFundstoInvestment = (jwt , funds, id, operation) => {
-  fetch(`${URI}/api/investments`, {
+  fetch(`/api/investments`, {
     headers: {
       Authorization: `Bearer ${jwt}`,
       "content-type": "application/json-patch+json",
@@ -104,7 +104,7 @@ export const changeFundstoInvestment = (jwt , funds, id, operation) => {
 
 export async function  getWallet(jwt, id){
 
-  const resp = await fetch(`${URI}/api/users/getWallet/${id}`, {
+  const resp = await fetch(`/api/users/getWallet/${id}`, {
     headers: {
       "content-type": "application/json",
       Authorization: `Bearer ${jwt}`,
@@ -118,7 +118,7 @@ export async function  getWallet(jwt, id){
 
 export const deleteInvestment = (jwt, id) => {
   console.log(id)
-  fetch(`${URI}/api/investments`, {
+  fetch(`/api/investments`, {
     headers: {
       Authorization: `Bearer ${jwt}`,
       "content-type": "application/json",
@@ -138,7 +138,7 @@ export const deleteInvestment = (jwt, id) => {
 
 export const signUp = (user) => {
  // console.log(user)
-  fetch(`${URI}/api/users/register`, {
+  fetch(`/api/users/register`, {
     headers: {
       "content-type": "application/json",
       "cors": "Access-Control-Allow-Origin"

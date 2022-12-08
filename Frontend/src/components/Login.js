@@ -24,7 +24,7 @@ const Login = () => {
 
     if(jwt.length === 0 || !data){
       console.log("Logging in")
-      fetch(`${URI}/api/auth/login`, {
+      fetch(`/api/auth/login`, {
         headers: {
           "Content-Type": "application/json",
         },
