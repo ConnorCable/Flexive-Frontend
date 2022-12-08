@@ -36,12 +36,8 @@ const Login = () => {
       })
         .then((response) => Promise.all([response.json(), response.headers]))
         .then(([body, headers]) => {
-          setJwt(headers.get("authorization"), setData(body))
-
+          console.log(headers.get("authorization"))
         })
-      }
-      else if (jwt && data){
-        navigate('/profile')
       }
      
 
