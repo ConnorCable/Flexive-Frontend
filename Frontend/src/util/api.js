@@ -141,6 +141,7 @@ export const signUp = (user) => {
   fetch(`${URI}/api/users/register`, {
     headers: {
       "content-type": "application/json",
+      "cors": "Access-Control-Allow-Origin"
     },
     method: "POST",
     body: JSON.stringify({
