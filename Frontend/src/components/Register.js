@@ -15,7 +15,7 @@ const Register = () => {
   const handleSubmit = e => {
     e.preventDefault()
     signUp(credentials)
-    setTimeout(() => navigate("/login"), 200)
+    //setTimeout(() => navigate("/login"), 200)
   }
 
   return (

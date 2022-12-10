@@ -24,7 +24,7 @@ const Login = () => {
 
     if(jwt.length === 0 || !data){
       console.log("Logging in")
-      fetch(`${URI}/api/auth/login`, {
+      fetch(`/api/auth/login`, {
         headers: {
           "Content-Type": "application/json",
         },
@@ -37,8 +37,8 @@ const Login = () => {
         .then((response) => Promise.all([response.json(), response.headers]))
         .then(([body, headers]) => {
           setJwt(headers.get("authorization"), setData(body))
+
         })
-       // navigate('/profile')
       }
       else if (jwt && data){
         navigate('/profile')
