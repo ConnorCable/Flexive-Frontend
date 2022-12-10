@@ -1,4 +1,4 @@
-export const URI = "flexive.herokuapp.com"
+export const URI = "https://flexive.herokuapp.com/"
 
 
 export async function  getInvestments(jwt){
@@ -22,7 +22,6 @@ export const addInvestment = (jwt) => {
       headers: {
         "content-type": "application/json",
         Authorization: `Bearer ${jwt}`,
-        'Access-Control-Request-Method': 'POST',
       },
       method: "POST",
 
@@ -139,7 +138,7 @@ export const deleteInvestment = (jwt, id) => {
 
 export const signUp = (user) => {
  // console.log(user)
-  fetch(`flexive.herokuapp.com/api/users/register`, {
+  fetch(`${URI}/api/users/register`, {
     headers: {
       "content-type": "application/json",
     },
