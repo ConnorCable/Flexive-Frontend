@@ -139,7 +139,7 @@ export const deleteInvestment = (jwt, id) => {
 
 export const signUp = (user) => {
  // console.log(user)
-  fetch(`${URI}/api/users/register`, {
+  fetch(`/api/users/register`, {
     headers: {
       "content-type": "application/json",
       'Access-Control-Request-Method': 'POST',
