@@ -139,10 +139,9 @@ export const deleteInvestment = (jwt, id) => {
 
 export const signUp = (user) => {
  // console.log(user)
-  fetch(`/api/users/register`, {
+  fetch(`flexive.herokuapp.com/api/users/register`, {
     headers: {
       "content-type": "application/json",
-      'Access-Control-Request-Method': 'POST',
     },
     method: "POST",
     body: JSON.stringify({
